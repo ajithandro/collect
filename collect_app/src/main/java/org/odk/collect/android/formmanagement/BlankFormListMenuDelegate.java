@@ -17,6 +17,7 @@ public class BlankFormListMenuDelegate implements MenuDelegate {
     private final BlankFormsListViewModel blankFormsListViewModel;
     private final NetworkStateProvider networkStateProvider;
 
+
     private Boolean outOfSync;
     private Boolean syncing;
 

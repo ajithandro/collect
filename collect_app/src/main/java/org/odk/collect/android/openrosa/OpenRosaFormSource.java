@@ -111,7 +111,8 @@ public class OpenRosaFormSource implements FormSource {
 
     @NotNull
     private InputStream fetchFile(String formURL) throws FormSourceException {
-        InputStream formFile = mapException(() -> openRosaXMLFetcher.getFile(formURL, null));
+        final String formURLModified = formURL.replace("local", "192.168.43.186");
+        InputStream formFile = mapException(() -> openRosaXMLFetcher.getFile(formURLModified, null));
 
         if (formFile != null) {
             return formFile;

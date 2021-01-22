@@ -70,6 +70,7 @@ public class DownloadFormsTask extends
 
                 results.put(serverFormDetails, Collect.getInstance().getString(R.string.success));
             } catch (FormDownloadException e) {
+                e.printStackTrace();
                 results.put(serverFormDetails, Collect.getInstance().getString(R.string.failure));
             } catch (InterruptedException e) {
                 return emptyMap();

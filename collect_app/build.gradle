@@ -227,6 +227,8 @@ configurations.all {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
 
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
@@ -382,6 +384,7 @@ dependencies {
 // Must be at bottom to prevent dependency collisions
 // https://developers.google.com/android/guides/google-services-plugin
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
 
 
 

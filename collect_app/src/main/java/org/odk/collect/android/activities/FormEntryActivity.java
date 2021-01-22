@@ -29,6 +29,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.KeyEvent;
@@ -1432,6 +1433,7 @@ public class FormEntryActivity extends CollectAbstractActivity implements Animat
                         if (saveAs.getText().length() < 1) {
                             showShortToast(R.string.save_as_error);
                         } else {
+
                             saveForm(EXIT, instanceComplete
                                     .isChecked(), saveAs.getText()
                                     .toString(), true);
@@ -1847,7 +1849,7 @@ public class FormEntryActivity extends CollectAbstractActivity implements Animat
                 return false;
             }
         }
-
+        Uri data = getIntent().getData();
         formSaveViewModel.saveForm(getIntent().getData(), complete, updatedSaveName, exit);
 
         return true;
